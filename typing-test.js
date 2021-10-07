@@ -29,7 +29,7 @@ function addWords() {
 }
 
 // Word Colors
-const colorCurrentWord = "#dddddd";
+const colorCurrentWord = "#ddddd";
 const colorCorrectWord = "#93C572";
 const colorIncorrectWord = "#e50000";
 
