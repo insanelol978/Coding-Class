@@ -30,7 +30,7 @@ function addWords() {
 
 // Word Colors
 const colorCurrentWord = "#ddddd";
-const colorCorrectWord = "#93C572";
+const colorCorrectWord = "#292b2a";
 const colorIncorrectWord = "#e50000";
 
 // Word Count and other data.
