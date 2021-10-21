@@ -6,32 +6,35 @@ console.log(name + " Barrus");
 
 console.log(1 + 2 + "A");
 
-console.log(
+// console.log(
 
-    2 + 2
+//     2 + 2
 
-);
+// );
 
-console.log(
+// console.log(
 
-    8 / 2
+//     8 / 2
 
-);
+// );
 
-console.log(
+// console.log(
 
-    99 === "99"
+//     99 === "99"
 
-);
+// );
 
-console.log(
+// console.log(
 
-    9 % 5
+//     9 % 5
 
-);
+// );
 
-console.log(
+// console.log(
 
-    "A " + "B"
+//     "A " + "B"
 
-);
+// );
+
+console.log("843-452-1574");
+console.log(843-452-1574);
