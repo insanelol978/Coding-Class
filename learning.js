@@ -26,6 +26,12 @@ console.log(
 
 console.log(
 
-    9 % 3
+    9 % 5
+
+);
+
+console.log(
+
+    "A" + "B"
 
 );
