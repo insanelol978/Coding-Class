@@ -1,10 +1,10 @@
-console.log("Hello World!")
+// console.log("Hello World!")
 
-let name = "Joshua";
+// let name = "Joshua";
 
-console.log(name + " Barrus");
+// console.log(name + " Barrus");
 
-console.log(1 + 2 + "A");
+// console.log(1 + 2 + "A");
 
 // console.log(
 
@@ -36,5 +36,8 @@ console.log(1 + 2 + "A");
 
 // );
 
+console.log( "Hello" + " World");
+
 console.log("843-452-1574");
+
 console.log(843-452-1574);
