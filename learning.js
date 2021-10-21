@@ -4,4 +4,4 @@ let name = "Joshua";
 
 console.log(name + " Barrus");
 
-console.log("A" - "B");
+console.log(1 + 2 +"A");
