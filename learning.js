@@ -20,6 +20,6 @@ console.log(
 
 console.log(
 
-    3 === 99
+    99 === 99
 
 );
