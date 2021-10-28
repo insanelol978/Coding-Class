@@ -55,3 +55,20 @@ cl(843-452-1574);
 // }
 // console.log(y);
 
+// if (2 > 1) {
+//  cl("I'm such a smart computer")
+
+// }
+
+// if (false) {
+//     throw "This can never happen";
+   
+//    }
+
+// for (let count = 1; count > 5; count++) {
+//     cl(count);
+// }
+
+// for (let index = 0; index < 10; index++) {
+//         cl(index)
+// }
