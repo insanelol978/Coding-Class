@@ -1,3 +1,8 @@
+let cl = console.log;
+
+// cl("Hello World");
+
+
 // console.log("Hello World!")
 
 // let name = "Joshua";
@@ -36,8 +41,17 @@
 
 // );
 
-console.log( "Hello" + " World!");
+cl( "Hello" + " World!");
 
-console.log("843-452-1574");
+cl("843-452-1574");
 
-console.log(843-452-1574);
+cl(843-452-1574);
+
+// let y = 1;
+
+// y = 2
+// {
+// let y = 3;
+// }
+// console.log(y);
+
