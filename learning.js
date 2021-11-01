@@ -41,11 +41,11 @@ let cl = console.log;
 
 // );
 
-cl( "Hello" + " World!");
+// cl( "Hello" + " World!");
 
-cl("843-452-1574");
+// cl("843-452-1574");
 
-cl(843-452-1574);
+// cl(843-452-1574);
 
 // let y = 1;
 
@@ -69,6 +69,11 @@ cl(843-452-1574);
 //     cl(count);
 // }
 
-// for (let index = 0; index < 10; index++) {
-//         cl(index)
-// }
+let hashtag = "#";
+
+for (let index = 0; index < 8; index++) {
+        cl(hashtag)
+        hashtag += "#"
+}
+
+cl("#");
