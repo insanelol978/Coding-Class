@@ -78,9 +78,17 @@ let cl = console.log;
 
 // cl("#");
 
-let name = "Joshua Barrus";
+// let name = "Joshua Barrus";
 
-for (let index = 0; index < 13; index++) {
-        cl(name);
+// for (let index = 0; index < 13; index++) {
+//         cl(name);
         
+// }
+
+for (let i = 0; i < 10; i++) {
+        
+        if (i % 2 === 0) {
+                continue;
+        }
+        cl(i);
 }
