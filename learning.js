@@ -75,6 +75,7 @@ let cl = console.log;
 //         cl(hashtag)
 //         hashtag += "#"
 // }
+// cl("#");
 
 // for (let i = 0; i < 10; i++) {
         
@@ -86,11 +87,11 @@ let cl = console.log;
 
 
 
-cl("#");
+
 
 let name = "Joshua Barrus";
 
-for (let index = 0; index < 13; index++) {
-        cl(name);
+for (let index = 0; index < name.length; index++) {
+        cl(name[index]);
         
 }
