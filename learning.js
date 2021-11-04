@@ -69,11 +69,11 @@ let cl = console.log;
 //     cl(count);
 // }
 
-let hashtag = "#";
+// let hashtag = "#";
 
-for (let index = 0; index < 8; index++) {
-        cl(hashtag)
-        hashtag += "#"
-}
+// for (let index = 0; index < 8; index++) {
+//         cl(hashtag)
+//         hashtag += "#"
+// }
 
-cl("#");
+// cl("#");
