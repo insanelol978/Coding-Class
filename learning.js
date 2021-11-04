@@ -77,3 +77,10 @@ let cl = console.log;
 // }
 
 // cl("#");
+
+let name = "Joshua Barrus";
+
+for (let index = 0; index < 13; index++) {
+        cl(name);
+        
+}
