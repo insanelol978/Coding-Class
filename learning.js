@@ -86,11 +86,14 @@ let cl = console.log;
 
 for (let i = 0; i < 16; i++) {
         
-        if (i % 3 === 0) {
-                cl("Fizz");
+        if (i % 15 === 0) {
+                cl("FizzBuzz");
         }
-        if (i % 5 === 0) {
+      else if (i % 5 === 0) {
                 cl("Buzz");
+        }
+      else if (i % 3 === 0) {
+                cl("Fizz");
         }
         else {
                 cl(i);
