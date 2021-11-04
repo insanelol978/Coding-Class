@@ -85,10 +85,6 @@ let cl = console.log;
 //         cl(i);
 // }
 
-
-
-
-
 let name = "Joshua Barrus";
 
 for (let index = 0; index < name.length; index++) {
