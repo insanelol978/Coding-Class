@@ -77,17 +77,22 @@ let cl = console.log;
 // }
 // cl("#");
 
-// for (let i = 0; i < 10; i++) {
+// let name = "Joshua Barrus";
+
+// for (let index = 0; index < name.length; index++) {
+//         cl(name[index]);
         
-//         if (i % 2 === 0) {
-//                 continue;
-//         }
-//         cl(i);
 // }
 
-let name = "Joshua Barrus";
-
-for (let index = 0; index < name.length; index++) {
-        cl(name[index]);
+for (let i = 0; i < 16; i++) {
         
+        if (i % 3 === 0) {
+                cl("Fizz");
+        }
+        if (i % 5 === 0) {
+                cl("Buzz");
+        }
+        else {
+                cl(i);
+        };
 }
