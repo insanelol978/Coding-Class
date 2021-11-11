@@ -125,9 +125,10 @@ let cl = console.log;
 // cl(greet("Nathan"));
 // cl(greet("Alanda"));
 
-let greet = function(name, timeOfDay) {
-         return "Good " + timeOfDay + ", " + name;
-};
+// let greet = function(name, timeOfDay) {
+//          return "Good " + timeOfDay + ", " + name;
+// };
 
-cl(greet("Bob", "evening"));
-cl(greet("Nathan", "day"));
+// cl(greet("Bob", "evening"));
+// cl(greet("Nathan", "day"));
+
