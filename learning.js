@@ -84,18 +84,25 @@ let cl = console.log;
         
 // }
 
-for (let i = 0; i < 101; i++) {
+// for (let i = 0; i < 101; i++) {
         
-        if (i % 15 === 0) {
-                cl("FizzBuzz");
-        }
-      else if (i % 5 === 0) {
-                cl("Buzz");
-        }
-      else if (i % 3 === 0) {
-                cl("Fizz");
-        }
-        else {
-                cl(i);
-        };
-}
+//         if (i % 15 === 0) {
+//                 cl("FizzBuzz");
+//         }
+//       else if (i % 5 === 0) {
+//                 cl("Buzz");
+//         }
+//       else if (i % 3 === 0) {
+//                 cl("Fizz");
+//         }
+//         else {
+//                 cl(i);
+//         };
+// }
+
+
+let fun = function() {
+        cl("Function says hello");
+};
+
+fun(); fun(); fun(); fun(); fun(); fun(); fun(); fun(); fun(); fun(); fun();
