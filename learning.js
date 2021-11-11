@@ -132,3 +132,8 @@ let cl = console.log;
 // cl(greet("Bob", "evening"));
 // cl(greet("Nathan", "day"));
 
+let add = function(num1, num2) {
+        return num1 + num2;
+};
+
+cl()
