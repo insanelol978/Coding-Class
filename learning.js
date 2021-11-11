@@ -101,8 +101,22 @@ let cl = console.log;
 // }
 
 
-let fun = function() {
-        cl("Function says hello");
+// let fun = function() {
+//         cl("Function says hello");
+// };
+
+// fun(); fun(); fun(); fun(); fun(); fun(); fun(); fun(); fun(); fun(); fun();
+
+// let getGreeting = function() {
+//         return "Hello From a Function!";
+// };
+
+// let greeting = getGreeting();
+// cl(greeting);
+
+let greet = function(name) {
+        return "Hello " + name;
 };
 
-fun(); fun(); fun(); fun(); fun(); fun(); fun(); fun(); fun(); fun(); fun();
+greeting = greet("Bob");
+cl(greeting);
