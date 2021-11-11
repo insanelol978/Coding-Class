@@ -114,9 +114,20 @@ let cl = console.log;
 // let greeting = getGreeting();
 // cl(greeting);
 
-let greet = function(name) {
-        return "Hello " + name;
+// let greet = function(name) {
+//         return "Hello " + name;
+// };
+
+// greeting = greet("Bob");
+// cl(greeting);
+
+// cl(greet(Bob));
+// cl(greet("Nathan"));
+// cl(greet("Alanda"));
+
+let greet = function(name, timeOfDay) {
+         return "Good " + timeOfDay + ", " + name;
 };
 
-greeting = greet("Bob");
-cl(greeting);
+cl(greet("Bob", "evening"));
+cl(greet("Nathan", "day"));
