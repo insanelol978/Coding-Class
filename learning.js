@@ -132,8 +132,38 @@ let cl = console.log;
 // cl(greet("Bob", "evening"));
 // cl(greet("Nathan", "day"));
 
+cl("These are the addition problems");
+
 let add = function(num1, num2) {
         return num1 + num2;
 };
 
-cl()
+cl(add(5, 10));
+cl(add(235, 63446));
+
+cl("These are the subtraction problems");
+
+let sub = function(num1, num2) {
+        return num1 - num2;
+}
+
+cl(sub(4, 3));
+cl(sub(5325, 523));
+
+cl("These are the multiplication problems");
+
+let mult = function(num1, num2) {
+        return num1 * num2;
+}
+
+cl(mult(3, 4));
+cl(mult(235, 432));
+
+cl("These are the division problems");
+
+let div = function(num1, num2) {
+        return num1 / num2
+}
+
+cl(div(12, 4));
+cl(div(287985, 365));
