@@ -143,27 +143,27 @@ cl(add(235, 63446));
 
 cl("These are the subtraction problems");
 
-let sub = function(num1, num2) {
+let subtract = function(num1, num2) {
         return num1 - num2;
 }
 
-cl(sub(4, 3));
-cl(sub(5325, 523));
+cl(subtract(4, 3));
+cl(subtract(5325, 523));
 
 cl("These are the multiplication problems");
 
-let mult = function(num1, num2) {
+let multiply = function(num1, num2) {
         return num1 * num2;
 }
 
-cl(mult(3, 4));
-cl(mult(235, 432));
+cl(multiply(3, 4));
+cl(multiply(235, 432));
 
 cl("These are the division problems");
 
-let div = function(num1, num2) {
+let division = function(num1, num2) {
         return num1 / num2
 }
 
-cl(div(12, 4));
-cl(div(287985, 365));
+cl(division(12, 4));
+cl(division(287985, 365));
