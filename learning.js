@@ -170,3 +170,36 @@ let cl = console.log;
 
 
 
+// let a = [1, 2, 3];
+// let b = ["x", "y", "z"];
+// let c = [a, b];
+// cl(a, b, c);
+
+// let a = [1, 2, 3];
+
+// a.push(4);
+// a.push(5);
+
+// cl(a);
+
+// a.pop();
+
+
+// let o = {};
+
+// o.name = "Nathan";
+// o.age = 100;
+
+// cl( o );
+
+
+// let o = {
+//         name: "Nathan",
+//         age: 100
+
+// };
+// cl(o);
+// console.table( o );
+
+
+
