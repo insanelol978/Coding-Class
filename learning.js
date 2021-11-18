@@ -132,38 +132,41 @@ let cl = console.log;
 // cl(greet("Bob", "evening"));
 // cl(greet("Nathan", "day"));
 
-cl("These are the addition problems");
+// cl("These are the addition problems");
 
-let add = function(num1, num2) {
-        return num1 + num2;
-};
+// let add = function(num1, num2) {
+//         return num1 + num2;
+// };
 
-cl(add(5, 10));
-cl(add(235, 63446));
+// cl(add(5, 10));
+// cl(add(235, 63446));
 
-cl("These are the subtraction problems");
+// cl("These are the subtraction problems");
 
-let subtract = function(num1, num2) {
-        return num1 - num2;
-}
+// let subtract = function(num1, num2) {
+//         return num1 - num2;
+// }
 
-cl(subtract(4, 3));
-cl(subtract(5325, 523));
+// cl(subtract(4, 3));
+// cl(subtract(5325, 523));
 
-cl("These are the multiplication problems");
+// cl("These are the multiplication problems");
 
-let multiply = function(num1, num2) {
-        return num1 * num2;
-}
+// let multiply = function(num1, num2) {
+//         return num1 * num2;
+// }
 
-cl(multiply(3, 4));
-cl(multiply(235, 432));
+// cl(multiply(3, 4));
+// cl(multiply(235, 432));
 
-cl("These are the division problems");
+// cl("These are the division problems");
 
-let division = function(num1, num2) {
-        return num1 / num2
-}
+// let division = function(num1, num2) {
+//         return num1 / num2
+// }
 
-cl(division(12, 4));
-cl(division(287985, 365));
+// cl(division(12, 4));
+// cl(division(287985, 365));
+
+
+
