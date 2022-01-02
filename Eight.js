@@ -3,29 +3,29 @@
 
 let day = "Tuesday"
 
-if (day = "Sunday"); {
+if (day === "Sunday") {
     console.log("Monday")
 } 
 
-if (day = "Monday") {
+else if (day === "Monday") {
     console.log("Tuesday");
 }
 
-if (day = "Tuesday"); {
+else if (day === "Tuesday") {
     console.log("Wednesday");
 }
 
-if (day = "Wednesday"); {
+else if (day === "Wednesday") {
     console.log("Thursday");
 }
 
-if (day = "Thursday"); {
+else if (day === "Thursday") {
     console.log("Friday");
 }
-if (day = "Friday"); {
+else if (day === "Friday") {
     console.log("Saturday");
 }
 
-if (day = "Saturday"); {
+else if (day === "Saturday") {
     console.log("Sunday");
 }
