@@ -45,7 +45,30 @@ director: "Christopher Nolan",
 imdbRating: 8.5
 }
 ];
-
 let moviesBefore2000 = ["Batman","Batman Returns","Batman Forever","Batman & Robin"]
 
 console.log(moviesBefore2000);
+
+// let moviesBefore2000 = movieList => {
+//     let moviesBefore2000 = [];
+//     for (let movie of movieList) {
+//         if (movieList.year < 2001) {
+//             moviesBefore2000.push(movie);
+//         }
+//     }
+//     return moviesBefore2000;
+
+
+// console.log(movieList);
+
+
+// const nolanMovies = () => {
+//     for (const movie of movieList) {
+//     if (movie.director === "Christopher Nolan") {
+//     nolanMovieList.push(movie);
+//     }
+//     }
+//     return nolanMovies;
+//     };
+
+//     console.log(nolanMovies());
