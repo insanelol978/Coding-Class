@@ -36,7 +36,7 @@ let congratulate = function(result) {
 
 let userInput = user();
 let computerInput = getrps();
-cl("You picked ", userInput);
+cl("You picked", userInput);
 cl("Computer picked", computerInput);
 let result = winner(userInput, computerInput);
 congratulate(result);
