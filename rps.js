@@ -1,30 +1,39 @@
 let cl = console.log
 
-let getrps = function() {
+let tie = 0
+let Win = 0
+let Lose = 0
+for (let index = 0; index < 101; index++) {
+
+
+let getrps = function () {
     let rps = ["rock", "paper", "scissors"];
     return rps[Math.floor(Math.random() * rps.length)];
 };
 
-let user = function() {
+let user = function () {
     let user = process.argv[2];
     return user || getrps();
 };
 
-let winner = function(userInput, computerInput) {
-    if(userInput === computerInput) {
-        return "tie";
+let winner = function (userInput, computerInput) {
+    if (userInput === computerInput) {
+        return "tie"; 
+        tie++
     }
     if (userInput === "rock" && computerInput === "scissors" ||
-    userInput === "scissors" && computerInput === "paper" ||
-    userInput === "paper" && computerInput === "rock"
+        userInput === "scissors" && computerInput === "paper" ||
+        userInput === "paper" && computerInput === "rock"
     ) {
-    return "Win";
+        return "Win"; 
+        Win++
     } else {
         return "Lose";
+         Lose++
     }
 };
 
-let congratulate = function(result) {
+let congratulate = function (result) {
     if (result === "tie") {
         cl("Nobody's a winner.");
     } else if (result === "Win") {
@@ -40,3 +49,4 @@ cl("You picked", userInput);
 cl("Computer picked", computerInput);
 let result = winner(userInput, computerInput);
 congratulate(result);
+}
