@@ -57,3 +57,6 @@ console.table(deck);
 
 let hand = dealHand();
 console.table(hand);
+
+let hand2 = dealHand();
+console.table(hand2);
