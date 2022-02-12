@@ -60,3 +60,16 @@ console.table(hand);
 
 let hand2 = dealHand();
 console.table(hand2);
+
+let rankCounter = function () {
+  console.log(hand2.card);
+};
+
+// This is how you can call on a specific card
+hand[0];
+
+// this is how you loop over a hand
+for (let index = 0; index < hand.length; index++) {
+  const card = hand[index];
+  card.name;
+}
