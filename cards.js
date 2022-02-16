@@ -61,15 +61,35 @@ console.table(hand);
 let hand2 = dealHand();
 console.table(hand2);
 
-let rankCounter = function () {
-  console.log(hand2.card);
-};
-
 // This is how you can call on a specific card
-hand[0];
+// hand[0];
 
 // this is how you loop over a hand
+// for (let index = 0; index < hand.length; index++) {
+//   const card = hand[index];
+//   card.name;
+// }
+
+let getHighestCard = function(hand) {
+
+  let highestCard = 0
+
 for (let index = 0; index < hand.length; index++) {
   const card = hand[index];
-  card.name;
+  for (let a = 0; a < hand.length; a++) {
+    const card2 = hand[a];
+    if (card.rank > card2.rank) {
+      if (card.rank > highestCard) {
+        highestCard = card.rank
+      }
+    }
+  }
 }
+ return highestCard
+}
+
+if (getHighestCard(hand) > getHighestCard(hand2)) {
+  cl("Player one Wins!");
+} else if (getHighestCard(hand) < getHighestCard(hand2)) {
+  cl("Player two Wins!") } else {
+    cl("Tie"); }
