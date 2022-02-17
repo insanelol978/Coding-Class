@@ -61,6 +61,12 @@ console.table(hand);
 let hand2 = dealHand();
 console.table(hand2);
 
+let hand3 = dealHand();
+console.table(hand3);
+
+let hand4 = dealHand();
+console.table(hand4);
+
 let getHighestCard = function (hand) {
   let highestCard = 0;
 
@@ -78,10 +84,17 @@ let getHighestCard = function (hand) {
   return highestCard;
 };
 
+let compare = function(hand, hand2) {
 if (getHighestCard(hand) > getHighestCard(hand2)) {
-  cl("Player one Wins!");
+  return hand
 } else if (getHighestCard(hand) < getHighestCard(hand2)) {
-  cl("Player two Wins!");
+  return hand2
 } else {
-  cl("Tie");
+  return "Tie"
+}
+};
+compare(hand, hand2)
+
+let declareWinner function() {
+  
 }
