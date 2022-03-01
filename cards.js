@@ -61,40 +61,35 @@ console.table(hand);
 let hand2 = dealHand();
 console.table(hand2);
 
-let hand3 = dealHand();
-console.table(hand3);
+// This is how you can call on a specific card
+// hand[0];
 
-let hand4 = dealHand();
-console.table(hand4);
+// this is how you loop over a hand
+// for (let index = 0; index < hand.length; index++) {
+//   const card = hand[index];
+//   card.name;
+// }
 
-let getHighestCard = function (hand) {
-  let highestCard = 0;
+let getHighestCard = function(hand) {
 
-  for (let index = 0; index < hand.length; index++) {
-    const card = hand[index];
-    for (let a = 0; a < hand.length; a++) {
-      const card2 = hand[a];
-      if (card.rank > card2.rank) {
-        if (card.rank > highestCard) {
-          highestCard = card.rank;
-        }
+  let highestCard = 0
+
+for (let index = 0; index < hand.length; index++) {
+  const card = hand[index];
+  for (let a = 0; a < hand.length; a++) {
+    const card2 = hand[a];
+    if (card.rank > card2.rank) {
+      if (card.rank > highestCard) {
+        highestCard = card.rank
       }
     }
   }
-  return highestCard;
-};
+}
+ return highestCard
+}
 
-let compare = function(hand, hand2) {
 if (getHighestCard(hand) > getHighestCard(hand2)) {
-  return hand
+  cl("Player one Wins!");
 } else if (getHighestCard(hand) < getHighestCard(hand2)) {
-  return hand2
-} else {
-  return "Tie"
-}
-};
-compare(hand, hand2)
-
-let declareWinner function() {
-  
-}
+  cl("Player two Wins!") } else {
+    cl("Tie"); }
