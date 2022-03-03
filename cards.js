@@ -70,26 +70,27 @@ console.table(hand2);
 //   card.name;
 // }
 
-let getHighestCard = function(hand) {
+let getHighestCard = function (hand) {
+  let highestCard = 0;
 
-  let highestCard = 0
-
-for (let index = 0; index < hand.length; index++) {
-  const card = hand[index];
-  for (let a = 0; a < hand.length; a++) {
-    const card2 = hand[a];
-    if (card.rank > card2.rank) {
-      if (card.rank > highestCard) {
-        highestCard = card.rank
+  for (let index = 0; index < hand.length; index++) {
+    const card = hand[index];
+    for (let a = 0; a < hand.length; a++) {
+      const card2 = hand[a];
+      if (card.rank > card2.rank) {
+        if (card.rank > highestCard) {
+          highestCard = card.rank;
+        }
       }
     }
   }
-}
- return highestCard
-}
+  return highestCard;
+};
 
 if (getHighestCard(hand) > getHighestCard(hand2)) {
   cl("Player one Wins!");
 } else if (getHighestCard(hand) < getHighestCard(hand2)) {
-  cl("Player two Wins!") } else {
-    cl("Tie"); }
+  cl("Player two Wins!");
+} else {
+  cl("It's a tie!");
+}
