@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .answer {
+            font-weight: bold;
+            border: 4px dashed blue;
+            padding: 20px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <h1>Hello</h1>
+    <p>Do you like fish stcks?</p>
+
+    <button @click="show = 'yes'">Yes</button>
+    <button @click="show = 'no'">No</button>
+
+    <div class="answerArea" v=if="show === 'yes'">
+    <p class="answer" id="yesAnswer" v-if="answer==='yes'">
+        You said yes, you like fish sticks, you weirdo.
+    </p> </div>
+
+    <div class="answerArea" v=if="show === 'no'">
+    <p class="answer" id="noAnswer" v-if="answer==='no'">
+        You said no. Who would like fish sticks anyway?
+    </p> </div>
+</div>
+
+<script src="lib/vue.js"></script>
+    <script>
+        Vue.createApp({
+            data: () => ({
+                show: null,
+            }),
+        }).mount("#app1");
+    </script>
+</body>
+</html>

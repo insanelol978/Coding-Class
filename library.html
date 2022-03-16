@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .answer {
+            display: none;
+            font-weight: bold;
+            border: 4px dashed blue;
+            padding: 20px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <p>Do you like fish stcks?</p>
+
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+
+    <p class="answer" id="yesAnswer">
+        You said yes, you like fish sticks, you weirdo.
+    </p>
+    <p class="answer" id="noAnswer">
+        You said no. Who would like fish sticks anyway?
+    </p>
+
+<script src="lib/jquery.js""></script>
+    <script>
+        $("#yesButton").click(function(){
+            $("#yesAnswer").show();
+            $("#noAnswer").hide();
+        });
+        
+        $("#noButton").click(function(){
+            $("#noAnswer").show();
+            $("#yesAnswer").hide();
+        });
+    </script>
+</body>
+</html>
