@@ -1,13 +1,18 @@
 ///<reference path="lib/p5.global-mode.d.ts" />
 
+let shapes = [];
+
 var setup = function () {
   createCanvas(600, 400);
+  for (let i = 0; i < 200; i++) {
+    shapes.push(new Rain());
+  }
 };
 
-let shape = {
+let minecart = {
   x: 0,
   y: 180,
-  vx: 2,
+  vx: 1,
   draw: function () {
     fill(72, 74, 72);
     rect((this.x += this.vx), (this.y), 100, 75);
@@ -20,9 +25,9 @@ let shape = {
   },
 };
 var draw = function () {
-  background(10, 136, 209);
+  background(62, 64, 62);
   strokeWeight(0);
-  fill(255, 255, 255, 100);
+  fill(0, 0, 0, 100);
   rect(75, 25, 100, 75); 
   rect(75, 45, 100, 75); 
   rect(85, 35, 100, 75); 
@@ -37,5 +42,36 @@ var draw = function () {
   fill(54, 52, 51);
   rect(0, 250, 600, 10); 
   rect(0, 270, 600, 10); 
-  shape.draw();
+  minecart.draw();
+  for (let index = 0; index < shapes.length; index++) {
+    const shape = shapes[index];
+    shape.draw();
+  }
 };
+
+class Shape {
+  constructor() {
+    this.x = random(600);
+    this.y = random(400);
+    this.vx = random(-5, 5);
+    this.vy = random(3, 7);
+    this.color = random(255);
+  }
+
+  draw() {
+    fill(this.color);
+    if (this.y < 0 || this.y > 400) {
+      this.y = 0
+    }
+  }
+}
+
+class Rain extends Shape {
+  // Circles get RGB colors!
+  color = [12, 62, 110, 175];
+
+  draw() {
+    super.draw();
+    ellipse((this.x), (this.y += this.vy), 10, 25 );
+  }
+}
