@@ -17,9 +17,8 @@ class Pong {
     this.table = new Table();
     this.leftPaddle = new leftPaddle();
     this.rightPaddle = new rightPaddle();
-    this.ball = new Ball(this.leftPaddle, this.rightPaddle);
-    this.leftPaddle.setball(this.ball);
-    this.rightPaddle.setball(this.ball);
+    this.ball = new Ball(1);
+    this.ball2 = new Ball(-1);
     this.score = new Score();
   }
   draw() {
@@ -27,12 +26,13 @@ class Pong {
     this.leftPaddle.draw();
     this.rightPaddle.draw();
     this.ball.draw();
+    this.ball2.draw();
     this.score.draw();
   }
 }
 class Table {
   draw() {
-    background("Black");
+    background("black");
     let midPoint = windowWidth / 2;
     for (let y = 0; y < windowHeight; y++) {
       fill(50);
@@ -43,12 +43,15 @@ class Table {
 }
 let scoreL = 0;
 let scoreR = 0;
+let message = "";
 class Score {
   draw() {
     textSize(64);
     fill("white");
     text(scoreL, windowWidth / 2 - 164, 50);
     text(scoreR, windowWidth / 2 + 100, 50);
+
+    text(message, windowWidth / 2 - 164, 200);
   }
 }
 class Paddle {
@@ -62,11 +65,7 @@ class Paddle {
     fill("white");
     rect(this.x, this.y, this.width, this.height);
   }
-  
 }
-setBall(ball) {
-    this.ball = ball;
-  };
 class leftPaddle extends Paddle {
   x = 40;
   draw() {
@@ -86,14 +85,12 @@ class rightPaddle extends Paddle {
   }
 }
 class Ball {
-  constructor(leftPaddle, rightPaddle) {
-    this.leftPaddle = leftPaddle;
-    this.rightPaddle = rightPaddle;
-    this.x = windowWidth / 2;
-    this.y = random(windowHeight);
-    this.vx = 10;
-    this.vy = 6;
-    this.color = "white";
+  constructor(a) {
+    (this.x = windowWidth / 2),
+      (this.y = random(windowHeight)),
+      (this.vx = a * 6),
+      (this.vy = a * 4),
+      (this.color = "white");
   }
   draw() {
     fill(this.color);
@@ -114,11 +111,25 @@ class Ball {
     if (this.x < 0) {
       this.x = windowWidth / 2;
       scoreR++;
+      this.vx-=2
+      this.vy-=2
+    }
+      if (scoreR >= 10) {
+        message = "You win!"
+        this.vx = 0
+        this.vy = 0
     }
     if (this.x > windowWidth) {
       this.x = windowWidth / 2;
       scoreL++;
+      this.vx+=2
+      this.vy+=2
     }
+      if (scoreL >= 10) {
+        message = "You Lose!"
+        this.vx = 0
+        this.vy = 0
+      } 
     square(this.x, this.y, 10);
     this.x += this.vx;
     this.y += this.vy;
