@@ -18,6 +18,9 @@ class Pong {
     this.leftPaddle = new leftPaddle();
     this.rightPaddle = new rightPaddle();
     this.ball = new Ball();
+    this.ball = new Ball(this.leftPaddle, this.rightPaddle);
+    this.leftPaddle.setball(this.ball);
+    this.rightPaddle.setball(this.ball);
     this.score = new Score();
   }
   draw() {
@@ -30,7 +33,7 @@ class Pong {
 }
 class Table {
   draw() {
-    background("black");
+    background("Black");
     let midPoint = windowWidth / 2;
     for (let y = 0; y < windowHeight; y++) {
       fill(50);
@@ -60,6 +63,9 @@ class Paddle {
     fill("white");
     rect(this.x, this.y, this.width, this.height);
   }
+  setBall(ball) {
+    this.ball = ball;
+  };
 }
 class leftPaddle extends Paddle {
   x = 40;
@@ -78,14 +84,18 @@ class rightPaddle extends Paddle {
     rightY = this.y;
     super.draw();
   }
-}
+} 
+let speed = 6
 class Ball {
   constructor() {
-    (this.x = windowWidth / 2),
-      (this.y = random(windowHeight)),
-      (this.vx = 6),
-      (this.vy = 4),
-      (this.color = "white");
+    constructor(leftPaddle, rightPaddle) {
+    this.leftPaddle = leftPaddle;
+    this.rightPaddle = rightPaddle;
+    this.x = windowWidth / 2;
+    this.y = random(windowHeight);
+    this.vx = speed;
+    this.vy = speed-2;
+    this.color = "white";
   }
   draw() {
     fill(this.color);
@@ -106,13 +116,18 @@ class Ball {
     if (this.x < 0) {
       this.x = windowWidth / 2;
       scoreR++;
+      this.vx--
+      this.vy--
     }
     if (this.x > windowWidth) {
       this.x = windowWidth / 2;
       scoreL++;
+      this.vx++
+      this.vy++
     }
     square(this.x, this.y, 10);
-    this.x += this.vx;
-    this.y += this.vy;
+    this.x += this.vx + speed;
+    this.y += this.vy + speed;
   }
 }
+
