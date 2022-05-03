@@ -32,7 +32,7 @@ class Pong {
 }
 class Table {
   draw() {
-    background("black");
+    background("Black");
     let midPoint = windowWidth / 2;
     for (let y = 0; y < windowHeight; y++) {
       fill(50);
@@ -51,7 +51,7 @@ class Score {
     text(scoreL, windowWidth / 2 - 164, 50);
     text(scoreR, windowWidth / 2 + 100, 50);
 
-    text(message, windowWidth / 2 - 164, 200);
+    text(message, windowWidth / 2 - 160, 200);
   }
 }
 class Paddle {
@@ -98,12 +98,12 @@ class Ball {
     if (this.y < 0 || this.y > windowHeight) {
       this.vy = -this.vy;
     }
-    if (this.x + 10 > rightX) {
+    if (this.x + 10 > rightX && this.x < rightX + 8) {
       if (this.y > rightY && this.y < rightY + paddleH) {
         this.vx = -this.vx;
       }
     }
-    if (this.x < leftX + 10) {
+    if (this.x < leftX + 10 && this.x + 8 > leftX) {
       if (this.y > leftY && this.y < leftY + paddleH) {
         this.vx = -this.vx;
       }
@@ -111,25 +111,25 @@ class Ball {
     if (this.x < 0) {
       this.x = windowWidth / 2;
       scoreR++;
-      this.vx-=2
-      this.vy-=2
+      this.vx -= 2;
+      this.vy -= 2;
     }
-      if (scoreR >= 10) {
-        message = "You win!"
-        this.vx = 0
-        this.vy = 0
+    if (scoreR >= 10) {
+      message = "  You win!";
+      this.vx = 0;
+      this.vy = 0;
     }
     if (this.x > windowWidth) {
       this.x = windowWidth / 2;
       scoreL++;
-      this.vx+=2
-      this.vy+=2
+      this.vx += 2;
+      this.vy += 2;
     }
-      if (scoreL >= 10) {
-        message = "You Lose!"
-        this.vx = 0
-        this.vy = 0
-      } 
+    if (scoreL >= 10) {
+      message = "You Lose!";
+      this.vx = 0;
+      this.vy = 0;
+    }
     square(this.x, this.y, 10);
     this.x += this.vx;
     this.y += this.vy;
