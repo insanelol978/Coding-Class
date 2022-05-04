@@ -138,15 +138,10 @@ class Ball {
     if (this.x < 0) {
       this.x = windowWidth / 2;
       scoreR++;
-<<<<<<< HEAD
      if (this.vx >= -10) {
       this.vx-=2
       this.vy-=2
      }
-=======
-      this.vx -= 2;
-      this.vy -= 2;
->>>>>>> f82059a06d467bbb61e5675d3df9e4e76b1a4824
     }
     if (scoreR >= 10) {
       message = "  You win!";
@@ -156,7 +151,6 @@ class Ball {
     if (this.x > windowWidth) {
       this.x = windowWidth / 2;
       scoreL++;
-<<<<<<< HEAD
       if(this.vx <= 10) {
         this.vx+=2
         this.vy+=2
@@ -187,16 +181,6 @@ class Ball {
         square(pos.x, pos.y, 10);
       }
 
-=======
-      this.vx += 2;
-      this.vy += 2;
-    }
-    if (scoreL >= 10) {
-      message = "You Lose!";
-      this.vx = 0;
-      this.vy = 0;
-    }
->>>>>>> f82059a06d467bbb61e5675d3df9e4e76b1a4824
     square(this.x, this.y, 10);
     this.x += this.vx;
     this.y += this.vy;
