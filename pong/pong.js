@@ -31,6 +31,9 @@ class Pong {
   }
 }
 class Table {
+  constructor(){
+    this.hslHistory = []
+  }
   draw() {
     background("black");
     let midPoint = windowWidth / 2;
@@ -38,6 +41,26 @@ class Table {
       fill(50);
       rect(midPoint - 5, y, 10, 20);
       y += 40;
+    }
+    colorMode(HSL)
+    noStroke()
+    this.hslHistory.push(frameCount % 360);
+
+if (this.hslHistory.length > 560) {
+  this.hslHistory.splice(0, 1);
+}
+
+    for (let i = 0; i < windowWidth; i++) {
+      let h = (frameCount % 360) +i;
+      if (h > 360){h = (h % 360)}
+      fill(h, 100, 50, 1)
+      
+      let offset = 2
+
+      square(i+offset, 0, offset)
+      square(i+offset, windowHeight-offset, offset)
+      square(0, i+offset, offset)
+      square(windowWidth-offset, i+offset, offset)
     }
   }
 }
@@ -62,7 +85,9 @@ class Paddle {
     this.height = paddleH;
   }
   draw() {
-    fill("white");
+    colorMode(HSL);
+    fill("black");
+    stroke((frameCount*2 % 360), 100, 50)
     rect(this.x, this.y, this.width, this.height);
   }
 }
@@ -91,6 +116,8 @@ class Ball {
       (this.vx = a * 6),
       (this.vy = a * 4),
       (this.color = "white");
+      this.history = [];
+      this.hslHistory = [];
   }
   draw() {
     fill(this.color);
@@ -98,12 +125,12 @@ class Ball {
     if (this.y < 0 || this.y > windowHeight) {
       this.vy = -this.vy;
     }
-    if (this.x + 10 > rightX) {
+    if (this.x + 10 > rightX && this.x < rightX + 8) {
       if (this.y > rightY && this.y < rightY + paddleH) {
         this.vx = -this.vx;
       }
     }
-    if (this.x < leftX + 10) {
+    if (this.x < leftX + 10 && this.x + 8 > leftX) {
       if (this.y > leftY && this.y < leftY + paddleH) {
         this.vx = -this.vx;
       }
@@ -111,8 +138,10 @@ class Ball {
     if (this.x < 0) {
       this.x = windowWidth / 2;
       scoreR++;
+     if (this.vx >= -10) {
       this.vx-=2
       this.vy-=2
+     }
     }
       if (scoreR >= 10) {
         message = "You win!"
@@ -122,14 +151,36 @@ class Ball {
     if (this.x > windowWidth) {
       this.x = windowWidth / 2;
       scoreL++;
-      this.vx+=2
-      this.vy+=2
+      if(this.vx <= 10) {
+        this.vx+=2
+        this.vy+=2
+      }
     }
       if (scoreL >= 10) {
         message = "You Lose!"
         this.vx = 0
         this.vy = 0
       } 
+      noStroke();
+      colorMode(HSL);
+
+      var v = createVector(this.x,this.y);
+      this.history.push(v);
+      this.hslHistory.push(frameCount % 360);
+
+      if(this.history.length > 80) {
+        this.history.splice(0, 1);
+        this.hslHistory.splice(0, 1);
+      }
+
+      for (let i = 0; i < this.history.length; i++) {
+        const pos = this.history[i];
+        const h = this.hslHistory[i];
+
+        fill(h, 100, 50, i*0.01);
+        square(pos.x, pos.y, 10);
+      }
+
     square(this.x, this.y, 10);
     this.x += this.vx;
     this.y += this.vy;
